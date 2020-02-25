@@ -14,7 +14,6 @@ int choose_pivot(int i,int j )
 {
    return((i+j) /2);
 }
-
 void quicksort(int list[],int m,int n)
 {
    int key,i,j,k;
