@@ -46,7 +46,6 @@ void partition(int arr[],int low,int high){
          mergeSort(arr,low,mid,high);
     }
 }
-
 void mergeSort(int arr[],int low,int mid,int high){
 
     int i,m,k,l,temp[MAX];
