@@ -3,7 +3,35 @@ class Node:
         self.left=None
         self.right=None
         self.data=data
-def Height(root):
+
+def levelOrderTaverse(root):
+    if root==None:
+        return 
+    temp=root
+    que=[temp]
+    while(len(que)>0):
+        print(que[0].data,end=" ")
+        temp=que.pop(0)
+        if(temp.left != None):
+            que.append(temp.left)
+        if(temp.right!=None):
+            que.append(temp.right)
+        
+            
+
+root=Node(4)
+root.left=Node(2)
+root.right=Node(6)
+root.left.left=Node(1)
+root.left.right=Node(3)
+root.right.left=Node(5)
+root.right.right=Node(7)
+root.right.right.right=Node(8)
+
+levelOrderTaverse(root)
+
+        
+"""def Height(root):
     if(root==None):
         return 0
     else:
@@ -21,7 +49,6 @@ def levelOrder(root,level):
     elif(level>1):
         levelOrder(root.left,level-1)
         levelOrder(root.right,level-1)
-    
           
 root=Node(4)
 root.left=Node(2)
@@ -34,7 +61,7 @@ root.right.right.right=Node(8)
 h=Height(root)
 for i in range(1,h+1):
     levelOrder(root,i)
-"""
+
                  (4)
                 /   \
              (2)     (6)
@@ -42,6 +69,7 @@ for i in range(1,h+1):
           (1)   (3)(5)  (7)
                           \
                            (8)
+
 """
 
 
