@@ -1,4 +1,4 @@
-# min element in given range
+# sum of elements in given range
 import math
 def buildSparseTable(arr,n):
     for i in range(n):
