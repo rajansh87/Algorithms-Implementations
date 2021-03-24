@@ -1,0 +1,67 @@
+/* IMPORTANT: Multiple classes and nested static classes are supported */
+
+
+// * uncomment this if you want to read input.
+//import for BufferedReader
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+//import for Scanner and other utility classes
+import java.util.*;
+
+
+// Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
+
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+        /* Sample code to perform I/O:
+         * Use either of these methods for input
+*/
+        //BufferedReader
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        String name = br.readLine();                // Reading input from STDIN
+  //      System.out.println("Hi, " + name + ".");    // Writing output to STDOUT
+    /*
+        //Scanner
+        Scanner obj = new Scanner(System.in);
+        int test = obj.nextLine();                 // Reading input from STDIN
+        System.out.println("Hi, " + test + ".");    // Writing output to STDOUT
+*/
+        
+
+        // Write your code here
+        int test = Integer.parseInt(br.readLine());
+        //System.out.println(test);
+        while(test>0)
+        {
+            int n = Integer.parseInt(br.readLine());
+            String[] arr=br.readLine().split(" ");
+            int[] brr=new int[arr.length];
+
+            for(int i=0;i<arr.length;i++)
+                brr[i]=Integer.parseInt(arr[i]);
+
+            /*for(int i=0;i<arr.length;i++)
+                System.out.print(intarr[i]);*/
+            int c=1;
+            for(int i=0;i<n-1;i++)
+            {
+                int flag=0;
+                for(int j=i+1;j<n;j++)
+                {
+                    if(brr[i]<brr[j])
+                    {
+                        flag=1;
+                        break;
+                    }
+                }
+                if(flag==0)
+                    c++;                
+            }
+            System.out.println(c);
+            test--;    
+        }
+
+        
+    }
+}
