@@ -15,6 +15,7 @@ s=lambda x : x*x if(x>0) else None
 print(s(6))
         
 
+
 def fun(n):
     return lambda a:a*n#print(a,n,a*n)
 mydoubler=fun(2)
