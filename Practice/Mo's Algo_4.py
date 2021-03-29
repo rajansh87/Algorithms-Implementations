@@ -31,7 +31,7 @@ for i in range(len(query)):
         #curS-=arr[curR-1]
         freq[arr[curR-1]]-=1
         curR-=1
-    if x in freq.keys():
+    if x in freq.keys() and freq[x]!=0:
         print(x,"exits in the range [",l,",",r,"]")
     else:
         print(x,"does not exits in the range [",l,",",r,"]")
